@@ -36,6 +36,29 @@
       <section>
         <h2>Фильтр гостиниц</h2>
         <!--Здесь будет форма-->
+        <div class="results">
+          <p>Найдено: 3</p>
+          <div class="sorting">
+            <!--Что лучше использовать для сортировки: список ссылок или радиокнопку? -->
+            <span>Сортировка:</span>
+            <label>
+              <input type="radio" name="sort" value="price" checked>
+              <span>По цене</span>
+            </label>
+            <label>
+              <input type="radio" name="sort" value="type">
+              <span>По типу</span>
+            </label>
+            <label>
+              <input type="radio" name="sort" value="rate">
+              <span>По рейтингу</span>
+            </label>
+            <!--Смену направления решила сделать кнопками, но может быть тут тоже подойдет радио-кнопка или просто обычная ссылка? -->
+            <button type="button">По возрастанию</button>
+            <button type="button">По убыванию</button>
+          </div>
+
+        </div>
       </section>
 
       <section>
