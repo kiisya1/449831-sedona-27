@@ -36,28 +36,24 @@
       <section>
         <h2>Фильтр гостиниц</h2>
         <!--Здесь будет форма-->
+
         <div class="results">
           <p>Найдено: 3</p>
-          <div class="sorting">
-            <!--Что лучше использовать для сортировки: список ссылок или радиокнопку? -->
-            <span>Сортировка:</span>
-            <label>
-              <input type="radio" name="sort" value="price" checked>
-              <span>По цене</span>
-            </label>
-            <label>
-              <input type="radio" name="sort" value="type">
-              <span>По типу</span>
-            </label>
-            <label>
-              <input type="radio" name="sort" value="rate">
-              <span>По рейтингу</span>
-            </label>
-            <!--Смену направления решила сделать кнопками, но может быть тут тоже подойдет радио-кнопка или просто обычная ссылка? -->
-            <button type="button">По возрастанию</button>
-            <button type="button">По убыванию</button>
-          </div>
 
+          <div class="sorting">
+            <span>Сортировка:</span>
+            <ul>
+              <li><a href="#">По цене</a></li>
+              <li><a href="#">По типу</a></li>
+              <li><a href="#">По рейтингу</a></li>
+            </ul>
+
+            <div class="sorting-direction">
+              <a href="#">По возрастанию</a>
+              <a href="#">По убыванию</a>
+            </div>
+          
+          </div>
         </div>
       </section>
 
@@ -74,8 +70,7 @@
                 <span>От 4000 Р.</span>
               </p>
               <div>
-                <span>4 звезды</span>
-                <!--Сами звезды сделаю с помощью css (подсмотрела способ на https://www.tripadvisor.ru/)-->
+                <span>★★★★</span>
                 <p>Рейтинг: 8,5</p>
               </div>
               <a href="#">Подробнее</a>
@@ -92,8 +87,7 @@
                 <span>От 3000 Р.</span>
               </p>
               <div>
-                <span>3 звезды</span>
-                <!--Сами звезды сделаю с помощью css (подсмотрела способ на https://www.tripadvisor.ru/)-->
+                <span>★★★</span>
                 <p>Рейтинг: 8,9</p>
               </div>
               <a href="#">Подробнее</a>
@@ -110,8 +104,7 @@
                 <span>От 2000 Р.</span>
               </p>
               <div>
-                <span>2 звезды</span>
-                <!--Сами звезды сделаю с помощью css (подсмотрела способ на https://www.tripadvisor.ru/)-->
+                <span>★★</span>
                 <p>Рейтинг: 9,2</p>
               </div>
               <a href="#">Подробнее</a>
@@ -125,8 +118,8 @@
 
     <footer>
       <p>
-        #visitSEDONA<br>
-        Тел: +7(495) 666-02-66
+        <a href="#">#visitsedona</a><br>
+        <a href="tel:+74956660266">Тел: +7(495) 666-02-66</a>
       </p>
 
       <ul>
