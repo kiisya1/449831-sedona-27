@@ -30,12 +30,12 @@
 
     <main>
       <section>
-        <h1>Добро пожаловать в Седону</h1>
-        <img src="img/welcome.svg" width="459" height="353" alt="Добро пожаловать в город Седона">
+        <h1 class="visually-hidden">Добро пожаловать в город Седона</h1>
+        <img src="img/welcome-text.svg" width="459" height="353" alt="Welcome to the gorgeous Sedona! Because the Grand Canyon sucks!">
       </section>
 
       <section>
-        <h2>Седона — небольшой городок в Аризоне,заслуживающий большего!</h2>
+        <h2>Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         <!--Список преимуществ: видела, что делают на дивах, но на мой взгляд,
          по семантике и смыслу отлично подходит список-->
@@ -61,7 +61,6 @@
             </ul>
 
           </li>
-
           <li>
             <h3>Там есть Мост дьявола</h3>
             <span>— №2 —</span>
@@ -90,12 +89,45 @@
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button type="button">Поиск гостиницы в Седоне</button>
-        <!--Здесь будет форма-->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            <label for="dep-date">Дата заезда:</label>
+            <input type="text" name="departure-date" placeholder="24 апреля 2017" id="dep-date">
+            <button type="button">
+              <!-- Тут будет иконка календаря -->
+              <span>Календарь</span>
+            </button>
+          </p>
+          <p>
+            <label for="arr-date">Дата выезда:</label>
+            <input type="text" name="arrival-date" placeholder="4 июля 2017" id="arr-date">
+            <button type="button">
+              <!-- Тут будет иконка календаря -->
+              <span>Календарь</span>
+            </button>
+          </p>
+          <p>
+            <label for="adl-number">Взрослые:</label>
+            <button type="button">Минус</button>
+            <input type="number" name="adults" min="1" id="adl-number" value="2">
+            <button type="button">Плюс</button>
+          </p>
+          <p>
+            <label for="chl-number">Дети:</label>
+            <button type="button">Минус</button>
+            <input type="number" name="children" min="0" id="chl-number" value="0">
+            <button type="button">Плюс</button>
+          </p>
+          <button type="submit">Найти</button>
+        </form>
       </section>
 
       <section>
+        <h2 class="visually-hidden">Как найти Седону</h2>
         <!--Здесь будет карта, но пока будет картинка-->
-        <img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны">
+        <p>
+          <img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны и ближайших районов">
+        </p>
       </section>
 
     </main>
