@@ -95,7 +95,7 @@
             <input type="text" name="departure-date" placeholder="24 апреля 2017" id="dep-date">
             <button type="button">
               <!-- Тут будет иконка календаря -->
-              <span>Календарь</span>
+              <span>Открыть календарь</span>
             </button>
           </p>
           <p>
@@ -103,20 +103,24 @@
             <input type="text" name="arrival-date" placeholder="4 июля 2017" id="arr-date">
             <button type="button">
               <!-- Тут будет иконка календаря -->
-              <span>Календарь</span>
+              <span>Открыть календарь</span>
             </button>
           </p>
           <p>
             <label for="adl-number">Взрослые:</label>
-            <button type="button">-</button>
-            <input type="number" name="adults" min="1" id="adl-number" value="2">
-            <button type="button">+</button>
+            <fieldset>
+              <button type="button" aria-label="Убавить 1 человека">-</button>
+              <input type="number" name="adults" min="1" id="adl-number" value="2">
+              <button type="button" aria-label="Добавить 1 человека">+</button>
+            </fieldset>
           </p>
           <p>
             <label for="chl-number">Дети:</label>
-            <button type="button">-</button>
-            <input type="number" name="children" min="0" id="chl-number" value="0">
-            <button type="button">+</button>
+            <fieldset>
+              <button type="button" aria-label="Убавить 1 ребенка">-</button>
+              <input type="number" name="children" min="0" id="chl-number" value="0">
+              <button type="button" aria-label="Добавить 1 ребенка">+</button>
+            </fieldset>
           </p>
           <button type="submit">Найти</button>
         </form>
@@ -125,9 +129,7 @@
       <section>
         <h2 class="visually-hidden">Как найти Седону</h2>
         <!--Здесь будет карта, но пока будет картинка-->
-        <p>
-          <img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны и ближайших районов">
-        </p>
+        <img src="img/map.jpg" width="1200" height="593" alt="Карта Седоны и ближайших районов">
       </section>
 
     </main>
