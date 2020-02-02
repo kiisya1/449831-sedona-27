@@ -92,7 +92,7 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <p>
             <label for="dep-date">Дата заезда:</label>
-            <input type="text" name="departure-date" placeholder="24 апреля 2017" id="dep-date">
+            <input type="text" name="departure-date" placeholder="24 апреля 2017" id="dep-date" required>
             <button type="button">
               <!-- Тут будет иконка календаря -->
               <span>Открыть календарь</span>
@@ -100,7 +100,7 @@
           </p>
           <p>
             <label for="arr-date">Дата выезда:</label>
-            <input type="text" name="arrival-date" placeholder="4 июля 2017" id="arr-date">
+            <input type="text" name="arrival-date" placeholder="4 июля 2017" id="arr-date" required>
             <button type="button">
               <!-- Тут будет иконка календаря -->
               <span>Открыть календарь</span>
@@ -110,7 +110,7 @@
             <label for="adl-number">Взрослые:</label>
             <fieldset>
               <button type="button" aria-label="Убавить 1 человека">-</button>
-              <input type="number" name="adults" min="1" id="adl-number" value="2">
+              <input type="number" name="adults" min="1" id="adl-number" value="2" required>
               <button type="button" aria-label="Добавить 1 человека">+</button>
             </fieldset>
           </p>
@@ -118,7 +118,7 @@
             <label for="chl-number">Дети:</label>
             <fieldset>
               <button type="button" aria-label="Убавить 1 ребенка">-</button>
-              <input type="number" name="children" min="0" id="chl-number" value="0">
+              <input type="number" name="children" min="0" id="chl-number" value="0" required>
               <button type="button" aria-label="Добавить 1 ребенка">+</button>
             </fieldset>
           </p>
