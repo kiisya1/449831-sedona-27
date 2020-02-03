@@ -38,7 +38,7 @@
         <form action="https://echo.htmlacademy.ru" method="get">
           <fieldset>
             <legend>Инфраструктура:</legend>
-            <ul aria-label="Выберите необходимые условия из списка">
+            <ul>
               <li>
                 <label>
                   <input type="checkbox" name="pool" checked>
@@ -62,7 +62,7 @@
           </fieldset>
           <fieldset>
             <legend>Тип жилья:</legend>
-            <ul aria-label="Выберите необходимые типы жилья из списка">
+            <ul>
               <li>
                 <label>
                   <input type="checkbox" name="hotel" checked>
@@ -86,21 +86,20 @@
           </fieldset>
           <fieldset>
             <legend>Стоимость в сутки (Р):</legend>
-            <div class="range-slider">
+            <div>
               <label aria-label="Введите минимальную стоимость отеля в сутки" for="min-cost">От</label>
               <input type="number" value="0" name="min" id="min-cost" min="0">
               <label aria-label="Введите максимальную стоимость отеля в сутки" for="max-cost">До</label>
               <input type="number" value="3000" name="max" id="max-cost" min="0">
+            </div>
 
-              <div class="range-slider-scale">
-                <span>Шкала</span>
-                <button type="button" aria-label="Переместите ползунок, чтобы задать минимальную стоимость">
-                  <span>От</span>
-                </button>
-                <button type="button" aria-label="Переместите ползунок, чтобы задать максимальную стоимость">
-                  <span>До</span>
-                </button>
-              </div>
+            <div>
+              <button type="button" aria-label="Переместите ползунок, чтобы задать минимальную стоимость">
+                От
+              </button>
+              <button type="button" aria-label="Переместите ползунок, чтобы задать максимальную стоимость">
+                До
+              </button>
             </div>
 
           </fieldset>
