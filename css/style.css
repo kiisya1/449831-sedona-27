@@ -1,0 +1,306 @@
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: #333333;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+  box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.inner-page {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Кнопки */
+
+.button {
+  font: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  color: #ffffff;
+  font-weight: 700;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  border: 0;
+}
+
+.button-small {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.button-brown {
+  background-color: #766357;
+}
+
+.button-blue {
+  background-color: #81b3d2;
+}
+
+.button-brown:hover,
+.button-brown:focus {
+  background-color: #604e43;
+}
+
+.button-brown:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
+
+.button-blue:hover,
+.button-blue:focus {
+  background-color: #669ec0;
+}
+
+.button-blue:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #5496bd;
+}
+
+/* Главное меню */
+
+.page-navigation {
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.navigation-list {
+  margin: 0;
+
+  list-style: none;
+}
+
+.navigation-item a {
+  color: #000000;
+}
+
+.navigation-item a:hover,
+.navigation-item a:focus {
+  color: #81b3d2;
+}
+
+.navigation-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation-item-current a {
+  color: #766357;
+}
+
+/* Баннер на главной */
+
+.main-banner {
+  background-color: #5e7383;
+  background-image:
+        url("../img/intro-mask.svg"),
+        url("../img/background-photo.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center, center center;
+  background-size: contain, cover;
+}
+
+/* Список преимуществ */
+
+.features-title {
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.features-subtitle {
+  line-height: 26px;
+}
+
+/* Форма поиска отелей на главной */
+
+.search-title {
+  font-size: 30px;
+  line-height: 36px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.search-subtitle {
+  line-height: 24px;
+}
+
+.search-item {
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.number-field {
+  font-weight: 700;
+
+  border: 0;
+}
+
+.search-item input,
+.number-field input {
+  font: inherit;
+
+  background-color: #f2f2f2;
+  border: 0;
+}
+
+.number-field input  {
+  text-align: center;
+}
+
+.search-item input::placeholder,
+.number-field input::placeholder {
+  color: #000000;
+}
+
+.search-item input:hover,
+.number-field input:hover {
+  background-color: #ebebeb;
+}
+
+.search-item input:focus,
+.number-field input:focus {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+
+.button-calendar {
+  width: 30px;
+  height: 24px;
+
+  background-color: transparent;
+}
+
+.button-calendar svg {
+  fill: #cacaca;
+}
+
+.button-calendar:hover svg ,
+.button-calendar:focus svg {
+  fill: #000000;
+}
+
+.button-calendar:active svg {
+  fill: #81b3d2;
+}
+
+.button-number {
+  color: #cacaca;
+
+  background-color: #f2f2f2;
+}
+
+.button-number:hover,
+.button-number:focus {
+  color: #000000;
+}
+
+.button-number:active {
+  color: #81b3d2;
+}
+
+/* Список отелей */
+
+.hotels-list {
+  list-style: none;
+  border-top: 1px solid #e5e5e5;
+}
+
+.hotels-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel-title {
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.hotel-title:hover,
+.hotel-title:focus {
+  color: #81b3d2;
+}
+
+.hotel-title:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.hotel-stars {
+  color: #81b3d2;
+}
+
+.hotel-rating {
+  color: #666666;
+  text-align: center;
+
+  background-color: #f2f2f2;
+}
+
+.page-footer {
+  line-height: 26px;
+  color: #000000;
+}
+
+/* Футер */
+
+.index-footer {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-links {
+  font-size: 21px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.footer-links a {
+  color: #000000;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+  color: #81b3d2;
+}
+
+.footer-links a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-social {
+  list-style: none;
+}
