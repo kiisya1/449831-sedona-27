@@ -145,6 +145,57 @@ a {
   line-height: 26px;
 }
 
+.features-list {
+  list-style: none;
+}
+
+.features-item {
+  background-color: #eeeeee;
+}
+
+.features-item-left {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+  background-image: url("../img/feature-list-city-sedona.jpg");
+  background-repeat: no-repeat;
+  background-position: right 0 bottom 20px;
+  background-size: 800px;
+
+}
+
+.features-item-right {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+  background-image: url("../img/feature-list-bridge.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 800px;
+
+}
+
+.features-about {
+  color: #333333;
+
+  background-color: #ffffff;
+
+  list-style: none;
+}
+
+.feature-title,
+.about-title {
+  font-size: 21px;
+  line-height: 21px;
+  color: #000000;
+  font-weight: 700;
+}
+
+.features-item-left .feature-title,
+.features-item-right .feature-title {
+  color: #ffffff;
+}
+
 /* Форма поиска отелей на главной */
 
 .search-title {
@@ -270,6 +321,119 @@ a {
 .button-number:active {
   color: #81b3d2;
 }
+
+/* Фильтр */
+
+.filter-form {
+  color: #ffffff;
+
+  background-color: #688299;
+  background-image: url("../img/filter-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-column {
+  border: 0;
+}
+
+.filter-legend {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.filter-list {
+  list-style: none;
+}
+
+.filter-cost {
+  border: 2px solid #ffffff;
+}
+
+.filter-input {
+  color: #ffffff;
+
+  background-color: transparent;
+  border: 0;
+}
+
+.button-filter {
+  font-weight: 400;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+
+.button-filter:hover,
+.button-filter:focus,
+.button-filter:active {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.results-quantity {
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Сортировка */
+
+.sorting {
+  font-size: 12px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.sorting-list {
+  list-style: none;
+}
+
+.sorting-item {
+  color: rgba(0, 0, 0, 0.3);
+
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sorting-item:hover,
+.sorting-item:focus {
+  color: #81b3d2;
+}
+
+.sorting-item:active {
+  color: #000000;
+
+  border: 0;
+}
+
+.sorting-item-current {
+  color: #81b3d2;
+
+  border: 0;
+}
+
+.direction-icon {
+  fill: #cacaca;
+}
+
+.direction:hover .direction-icon,
+.direction:focus .direction-icon {
+  fill: #000000;
+}
+
+.direction:active .direction-icon {
+  fill: #81b3d2;
+}
+
+.direction-current .direction-icon,
+.direction-current:hover .direction-icon,
+.direction-current:focus .direction-icon 
+ {
+  fill: #81b3d2;
+}
+
 
 /* Список отелей */
 
