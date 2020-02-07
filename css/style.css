@@ -170,32 +170,70 @@ a {
   border: 0;
 }
 
-.search-item input,
-.number-field input {
+.input-date,
+.input-number {
   font: inherit;
 
   background-color: #f2f2f2;
   border: 0;
 }
 
-.number-field input  {
+.input-number  {
   text-align: center;
 }
 
-.search-item input::placeholder,
-.number-field input::placeholder {
+/* .input-date::placeholder и .input-number::placeholder  после автопрефиксера */
+
+.input-date::-webkit-input-placeholder {
   color: #000000;
 }
 
-.search-item input:hover,
-.number-field input:hover {
+.input-date::-moz-placeholder {
+  color: #000000;
+}
+
+.input-date:-ms-input-placeholder {
+  color: #000000;
+}
+
+.input-date::-ms-input-placeholder {
+  color: #000000;
+}
+
+.input-date::placeholder {
+  color: #000000;
+}
+
+.input-number::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.input-number::-moz-placeholder {
+  color: #000000;
+}
+
+.input-number:-ms-input-placeholder {
+  color: #000000;
+}
+
+.input-number::-ms-input-placeholder {
+  color: #000000;
+}
+
+.input-number::placeholder {
+  color: #000000;
+}
+
+.input-date:hover,
+.input-number:hover {
   background-color: #ebebeb;
 }
 
-.search-item input:focus,
-.number-field input:focus {
+.input-date:focus,
+.input-number:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
+  outline: 0;
 }
 
 .button-calendar {
@@ -205,16 +243,16 @@ a {
   background-color: transparent;
 }
 
-.button-calendar svg {
+.calendar-icon {
   fill: #cacaca;
 }
 
-.button-calendar:hover svg ,
-.button-calendar:focus svg {
+.button-calendar:hover .calendar-icon ,
+.button-calendar:focus .calendar-icon {
   fill: #000000;
 }
 
-.button-calendar:active svg {
+.button-calendar:active .calendar-icon {
   fill: #81b3d2;
 }
 
@@ -271,12 +309,11 @@ a {
   background-color: #f2f2f2;
 }
 
+/* Футер */
+
 .page-footer {
-  line-height: 26px;
   color: #000000;
 }
-
-/* Футер */
 
 .index-footer {
   background-color: rgba(255, 255, 255, 0.9);
@@ -284,6 +321,7 @@ a {
 
 .footer-links {
   font-size: 21px;
+  line-height: 26px;
   font-weight: 700;
   text-align: left;
 }
@@ -303,4 +341,9 @@ a {
 
 .footer-social {
   list-style: none;
+}
+
+.footer-copyright {
+  line-height: 26px;
+  vertical-align: middle;
 }
