@@ -98,9 +98,23 @@ a {
 }
 
 .navigation-list {
+  display: flex;
   margin: 0;
+  padding: 0;
 
   list-style: none;
+}
+
+.navigation-item {
+  width: 239px;
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navigation-item:nth-child(3) {
+  margin-left: auto;
 }
 
 .navigation-item a {
@@ -120,21 +134,48 @@ a {
   color: #766357;
 }
 
+.logo {
+  display: block;
+  width: 140px;
+  height: 71px;
+  margin: 0 auto;
+  margin-top: -56px;
+  margin-bottom: -15px;
+
+}
+
 /* Баннер на главной */
 
 .main-banner {
+  padding-top: 76px;
+  padding-bottom: 79px;
+  margin-bottom: 60px;
+
   background-color: #5e7383;
   background-image:
         url("../img/intro-mask.svg"),
         url("../img/background-photo.jpg");
   background-repeat: no-repeat;
-  background-position: bottom center, center center;
+  background-position: bottom -2px center, center center;
   background-size: contain, cover;
+}
+
+.banner-content {
+  margin: 0 auto;
 }
 
 /* Список преимуществ */
 
+.features {
+  margin-bottom: 50px;
+}
+
 .features-title {
+  width: 440px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 36px;
+
   font-size: 21px;
   line-height: 26px;
   color: #000000;
@@ -142,6 +183,11 @@ a {
 }
 
 .features-subtitle {
+  width: 600px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 55px;
+
   line-height: 26px;
 }
 
@@ -198,7 +244,16 @@ a {
 
 /* Форма поиска отелей на главной */
 
+.hotels-search {
+
+}
+
 .search-title {
+  width: 450px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
   font-size: 30px;
   line-height: 36px;
   color: #000000;
@@ -206,10 +261,33 @@ a {
 }
 
 .search-subtitle {
+  width: 600px;
+  padding: 0;
+  margin: 0 auto;
+  margin-bottom: 46px;
+
   line-height: 24px;
 }
 
+.button-form-close {
+  box-sizing: border-box;
+  width: 568px;
+  padding: 30px;
+}
+
+.search-form {
+  box-sizing: border-box;
+  width: 568px;
+  padding: 55px;
+  margin: 0 auto;
+
+  box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
 .search-item {
+  margin: 0;
+  margin-bottom: 30px;
+
   line-height: 26px;
   color: #000000;
   font-weight: 700;
@@ -325,6 +403,8 @@ a {
 /* Фильтр */
 
 .filter-form {
+  padding: 0 72px;
+
   color: #ffffff;
 
   background-color: #688299;
@@ -370,6 +450,10 @@ a {
   color: #000000;
 
   background-color: #ffffff;
+}
+
+.results {
+  padding: 0 72px;
 }
 
 .results-quantity {
@@ -429,7 +513,7 @@ a {
 
 .direction-current .direction-icon,
 .direction-current:hover .direction-icon,
-.direction-current:focus .direction-icon 
+.direction-current:focus .direction-icon
  {
   fill: #81b3d2;
 }
@@ -438,12 +522,26 @@ a {
 /* Список отелей */
 
 .hotels-list {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
   border-top: 1px solid #e5e5e5;
 }
 
 .hotels-item {
+  padding: 0;
+  padding-top: 30px;
+  margin: 0;
+
   border-bottom: 1px solid #e5e5e5;
+}
+
+.hotel {
+  display: flex;
+  align-items: flex-end;
+  padding: 0 72px;
+  margin-bottom: 30px;
 }
 
 .hotel-title {
@@ -462,6 +560,10 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.hotel-image {
+  order: -1;
+}
+
 .hotel-stars {
   color: #81b3d2;
 }
@@ -476,6 +578,12 @@ a {
 /* Футер */
 
 .page-footer {
+  display: flex;
+  padding-top: 36px;
+  padding-right: 100px;
+  padding-bottom: 32px;
+  padding-left: 132px;
+
   color: #000000;
 }
 
@@ -484,6 +592,11 @@ a {
 }
 
 .footer-links {
+  width: 230px;
+  padding: 0;
+  margin: 0;
+  margin-right: 162px;
+
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -491,6 +604,9 @@ a {
 }
 
 .footer-links a {
+  padding: 0;
+  margin: 0;
+
   color: #000000;
 }
 
@@ -504,10 +620,15 @@ a {
 }
 
 .footer-social {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
 .footer-copyright {
+  margin-left: auto;
+
   line-height: 26px;
   vertical-align: middle;
 }
