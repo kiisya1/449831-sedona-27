@@ -91,6 +91,10 @@ a {
 
 /* Главное меню */
 
+.page-header {
+  position: relative;
+}
+
 .page-navigation {
   line-height: 26px;
   color: #000000;
@@ -99,34 +103,31 @@ a {
 
 .navigation-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding: 0 72px;
 
   list-style: none;
 }
 
 .navigation-item {
   box-sizing: border-box;
-  width: 239px;
+  width: 240px;
   margin: 0;
   padding: 0;
   padding-top: 15px;
   padding-bottom: 15px;
-  padding-left: 72px;
 
   text-align: left;
 }
 
-.navigation-item:nth-child(3) {
+.navigation-item:nth-child(4n+3) {
   margin-left: auto;
 }
 
-.navigation-item:nth-child(n+2) {
-  padding-left: 0;
-  padding-right: 72px;
-
+.navigation-item:nth-child(4n+3),
+.navigation-item:nth-child(4n+4) {
   text-align: right;
-
 }
 
 .navigation-item a {
@@ -147,13 +148,11 @@ a {
 }
 
 .logo {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 530px;
   width: 140px;
   height: 71px;
-  margin: 0 auto;
-  margin-top: -56px;
-  margin-bottom: -15px;
-
 }
 
 /* Баннер на главной */
@@ -307,11 +306,13 @@ a {
 
 .number-items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .number-items .search-item {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .number-field {
@@ -628,8 +629,7 @@ a {
 
 .page-footer {
   display: flex;
-  justify-content: space-between;
-  padding: 36px 72px;
+  padding-top: 36px;
   padding-bottom: 32px;
 
   color: #000000;
@@ -640,9 +640,10 @@ a {
 }
 
 .footer-links {
-  width: 290px;
+  box-sizing: border-box;
+  width: 400px;
   padding: 0;
-  padding-left: 60px;
+  padding-left: 132px;
   margin: 0;
 
   font-size: 21px;
@@ -668,7 +669,7 @@ a {
 }
 
 .footer-social {
-  width: 290px;
+  width: 400px;
   padding: 0;
   margin: 0;
 
@@ -676,7 +677,7 @@ a {
 }
 
 .footer-copyright {
-  width: 290px;
+  width: 400px;
 
   line-height: 26px;
   vertical-align: middle;
