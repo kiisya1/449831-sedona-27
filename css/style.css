@@ -106,15 +106,27 @@ a {
 }
 
 .navigation-item {
+  box-sizing: border-box;
   width: 239px;
   margin: 0;
   padding: 0;
   padding-top: 15px;
   padding-bottom: 15px;
+  padding-left: 72px;
+
+  text-align: left;
 }
 
 .navigation-item:nth-child(3) {
   margin-left: auto;
+}
+
+.navigation-item:nth-child(n+2) {
+  padding-left: 0;
+  padding-right: 72px;
+
+  text-align: right;
+
 }
 
 .navigation-item a {
@@ -293,7 +305,20 @@ a {
   font-weight: 700;
 }
 
+.number-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.number-items .search-item {
+  display: flex;
+}
+
 .number-field {
+  padding: 0;
+  margin: 0;
+  margin-left: 20px;
+
   font-weight: 700;
 
   border: 0;
@@ -301,6 +326,9 @@ a {
 
 .input-date,
 .input-number {
+  box-sizing: border-box;
+  width: 316px;
+
   font: inherit;
 
   background-color: #f2f2f2;
@@ -308,6 +336,7 @@ a {
 }
 
 .input-number  {
+  width: 38px;
   text-align: center;
 }
 
@@ -539,12 +568,21 @@ a {
 
 .hotel {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   padding: 0 72px;
   margin-bottom: 30px;
 }
 
+.hotel-right-column {
+  margin-left: auto;
+}
+
 .hotel-title {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+
   font-size: 21px;
   line-height: 26px;
   color: #000000;
@@ -560,8 +598,19 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
+.hotel-title h3 {
+  padding: 0;
+  margin: 0;
+}
+
 .hotel-image {
-  order: -1;
+  margin-right: 30px;
+}
+
+.hotel-about {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 18px;
 }
 
 .hotel-stars {
@@ -579,10 +628,9 @@ a {
 
 .page-footer {
   display: flex;
-  padding-top: 36px;
-  padding-right: 100px;
+  justify-content: space-between;
+  padding: 36px 72px;
   padding-bottom: 32px;
-  padding-left: 132px;
 
   color: #000000;
 }
@@ -592,10 +640,10 @@ a {
 }
 
 .footer-links {
-  width: 230px;
+  width: 290px;
   padding: 0;
+  padding-left: 60px;
   margin: 0;
-  margin-right: 162px;
 
   font-size: 21px;
   line-height: 26px;
@@ -620,6 +668,7 @@ a {
 }
 
 .footer-social {
+  width: 290px;
   padding: 0;
   margin: 0;
 
@@ -627,7 +676,7 @@ a {
 }
 
 .footer-copyright {
-  margin-left: auto;
+  width: 290px;
 
   line-height: 26px;
   vertical-align: middle;
