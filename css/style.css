@@ -203,36 +203,62 @@ a {
 }
 
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
 .features-item {
+  box-sizing: border-box;
+  width: 400px;
+  padding-top: 50px;
+  margin: 0;
+
   background-color: #eeeeee;
 }
 
-.features-item-left {
+.features-item-left,
+.features-item-right {
+  width: 100%;
   color: #ffffff;
 
   background-color: #81b3d2;
-  background-image: url("../img/feature-list-city-sedona.jpg");
   background-repeat: no-repeat;
-  background-position: right 0 bottom 20px;
   background-size: 800px;
+}
 
+
+.features-item-left {
+  padding-top: 46px;
+
+  background-image: url("../img/feature-list-city-sedona.jpg");
+  background-position: right 0 top -70px;
 }
 
 .features-item-right {
-  color: #ffffff;
-
-  background-color: #81b3d2;
   background-image: url("../img/feature-list-bridge.jpg");
-  background-repeat: no-repeat;
   background-position: left center;
-  background-size: 800px;
+}
 
+.features-column {
+  box-sizing: border-box;
+  width: 400px;
+}
+
+.features-column-right {
+  margin-left: auto;
 }
 
 .features-about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  padding-top: 164px;
+  margin: 0;
+
   color: #333333;
 
   background-color: #ffffff;
@@ -240,8 +266,20 @@ a {
   list-style: none;
 }
 
+.about-item {
+  box-sizing: border-box;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+
+}
+
 .feature-title,
 .about-title {
+  width: 160px;
+  margin: 0 auto;
+  margin-bottom: 21px;
+
   font-size: 21px;
   line-height: 21px;
   color: #000000;
@@ -251,6 +289,27 @@ a {
 .features-item-left .feature-title,
 .features-item-right .feature-title {
   color: #ffffff;
+}
+
+.feature-number {
+  display: block;
+  margin-bottom: 21px;
+}
+
+.feature-text {
+  padding: 0px 49px;
+  padding-bottom: 64px;
+  margin: 0;
+}
+
+.about-title {
+  margin-bottom: 25px;
+}
+
+.about-text {
+  padding: 0px 49px;
+  padding-bottom: 86px;
+  margin: 0;
 }
 
 /* Форма поиска отелей на главной */
@@ -433,7 +492,9 @@ a {
 /* Фильтр */
 
 .filter-form {
-  padding: 0 72px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 72px;
 
   color: #ffffff;
 
@@ -444,23 +505,59 @@ a {
 }
 
 .filter-column {
+  box-sizing: border-box;
+  width: 240px;
+  padding: 0;
+  margin: 0;
+
   border: 0;
 }
 
+.filter-column-cost {
+  width: 320px;
+  margin-left: auto;
+
+}
+
 .filter-legend {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 26px;
+
   font-size: 16px;
   font-weight: 700;
 }
 
+.filter-column-cost .filter-legend {
+  margin-bottom: 12px;
+}
+
 .filter-list {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
+.filter-item {
+  margin-bottom: 22px;
+}
+
+.filter-item:last-child {
+  margin-bottom: 0;
+}
+
 .filter-cost {
+  box-sizing: border-box;
+  width: 320px;
+
   border: 2px solid #ffffff;
 }
 
 .filter-input {
+  box-sizing: border-box;
+  width: 72px;
+
   color: #ffffff;
 
   background-color: transparent;
@@ -483,10 +580,18 @@ a {
 }
 
 .results {
-  padding: 0 72px;
+  display: flex;
+  align-items: baseline;
+
+  padding: 30px 72px;
 }
 
 .results-quantity {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  margin-right: 14px;
+
   font-size: 21px;
   line-height: 26px;
   color: #000000;
@@ -496,13 +601,34 @@ a {
 /* Сортировка */
 
 .sorting {
+  display: flex;
+
   font-size: 12px;
   line-height: 18px;
   color: #000000;
 }
 
+.sorting  span {
+  margin-right: 40px;
+}
+
 .sorting-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 570px;
+  padding: 0;
+  margin: 0;
+
+
   list-style: none;
+}
+
+.sorting-list li {
+  margin-right: 33px;
+}
+
+.sorting-list li:last-child {
+    margin-right: 0;
 }
 
 .sorting-item {
@@ -510,6 +636,8 @@ a {
 
   border-bottom: 1px dotted #81b3d2;
 }
+
+
 
 .sorting-item:hover,
 .sorting-item:focus {
@@ -526,6 +654,10 @@ a {
   color: #81b3d2;
 
   border: 0;
+}
+
+.sorting-direction {
+  margin-left: auto;
 }
 
 .direction-icon {
