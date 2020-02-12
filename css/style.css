@@ -177,10 +177,6 @@ a {
 
 /* Список преимуществ */
 
-.features {
-  margin-bottom: 50px;
-}
-
 .features-title {
   width: 440px;
   padding: 0;
@@ -223,6 +219,8 @@ a {
 .features-item-left,
 .features-item-right {
   width: 100%;
+  padding-top: 0;
+
   color: #ffffff;
 
   background-color: #81b3d2;
@@ -232,8 +230,6 @@ a {
 
 
 .features-item-left {
-  padding-top: 46px;
-
   background-image: url("../img/feature-list-city-sedona.jpg");
   background-position: right 0 top -70px;
 }
@@ -246,6 +242,11 @@ a {
 .features-column {
   box-sizing: border-box;
   width: 400px;
+  padding-top: 50px;
+}
+
+.features-column-left {
+  padding-top: 46px;
 }
 
 .features-column-right {
@@ -256,7 +257,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  padding-top: 164px;
   margin: 0;
 
   color: #333333;
@@ -270,8 +270,8 @@ a {
   box-sizing: border-box;
   width: 400px;
   padding: 0;
+  padding-top: 164px;
   margin: 0;
-
 }
 
 .feature-title,
@@ -315,7 +315,7 @@ a {
 /* Форма поиска отелей на главной */
 
 .hotels-search {
-
+  padding-top: 50px;
 }
 
 .search-title {
