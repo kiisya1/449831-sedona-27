@@ -440,9 +440,10 @@ input[type="checkbox"].visually-hidden {
   padding: 6px 12px;
 
   font: inherit;
+  text-transform: uppercase;
 
   background-color: #f2f2f2;
-  border: 0;
+  border: 2px solid transparent;
 
   box-sizing: border-box;
 }
@@ -470,42 +471,52 @@ input[type="checkbox"].visually-hidden {
 
 .input-date::-webkit-input-placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-date::-moz-placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-date:-ms-input-placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-date::-ms-input-placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-date::placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-number::-webkit-input-placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-number::-moz-placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-number:-ms-input-placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-number::-ms-input-placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-number::placeholder {
   color: #000000;
+  text-transform: uppercase;
 }
 
 .input-date:hover,
@@ -533,6 +544,8 @@ input[type="checkbox"].visually-hidden {
   padding: 6px 7px;
 
   background-color: #f2f2f2;
+  border: 2px solid transparent;
+  border-left: 0;
 
   box-sizing: border-box;
 }
@@ -592,9 +605,15 @@ input[type="checkbox"].visually-hidden {
   box-sizing: border-box;
 }
 
+/* Карта */
+
 .map {
   position: relative;
   height: 594px;
+}
+
+.map img {
+  display: block;
 }
 
 /* Фильтр */
