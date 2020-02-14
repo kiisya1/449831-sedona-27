@@ -471,52 +471,42 @@ input[type="checkbox"].visually-hidden {
 
 .input-date::-webkit-input-placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-date::-moz-placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-date:-ms-input-placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-date::-ms-input-placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-date::placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-number::-webkit-input-placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-number::-moz-placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-number:-ms-input-placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-number::-ms-input-placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-number::placeholder {
   color: #000000;
-  text-transform: uppercase;
 }
 
 .input-date:hover,
