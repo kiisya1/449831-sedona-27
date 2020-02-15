@@ -111,6 +111,22 @@ input[type="checkbox"].visually-hidden {
   background-color: #5496bd;
 }
 
+.button:disabled,
+a.disabled,
+.button:disabled:hover,
+a.disabled:hover,
+.button:disabled:focus,
+a.disabled:focus,
+.button:disabled:active,
+a.disabled:active
+ {
+  color: #cacaca;
+
+  background-color: #f2f2f2;
+
+  cursor: default;
+}
+
 /* Главное меню */
 
 .page-header {
@@ -182,15 +198,14 @@ input[type="checkbox"].visually-hidden {
 
 .main-banner {
   padding-top: 76px;
-  padding-bottom: 79px;
-  margin-bottom: 60px;
+  padding-bottom: 73px;
 
   background-color: #5e7383;
   background-image:
         url("../img/intro-mask.svg"),
         url("../img/background-photo.jpg");
   background-repeat: no-repeat;
-  background-position: bottom -2px center, center center;
+  background-position: bottom -2px center, top -83px center;
   background-size: contain, cover;
 }
 
@@ -200,11 +215,15 @@ input[type="checkbox"].visually-hidden {
 
 /* Список преимуществ */
 
+.features {
+  padding-top: 61px;
+}
+
 .features-title {
   width: 440px;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 36px;
+  margin-bottom: 26px;
 
   font-size: 21px;
   line-height: 26px;
@@ -216,7 +235,7 @@ input[type="checkbox"].visually-hidden {
   width: 600px;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 55px;
+  margin-bottom: 51px;
 
   line-height: 26px;
 }
@@ -232,7 +251,7 @@ input[type="checkbox"].visually-hidden {
 
 .features-item {
   width: 400px;
-  padding-top: 50px;
+  padding-top: 47px;
   margin: 0;
 
   background-color: #eeeeee;
@@ -255,23 +274,23 @@ input[type="checkbox"].visually-hidden {
 
 .features-item-left {
   background-image: url("../img/feature-list-city-sedona.jpg");
-  background-position: right 0 top -70px;
+  background-position: right 0 top -78px;
 }
 
 .features-item-right {
   background-image: url("../img/feature-list-bridge.jpg");
-  background-position: left center;
+  background-position: left bottom -68px;
 }
 
 .features-column {
   width: 400px;
-  padding-top: 50px;
+  padding-top: 46px;
 
   box-sizing: border-box;
 }
 
 .features-column-left {
-  padding-top: 46px;
+  padding-top: 47px;
 }
 
 .features-column-right {
@@ -292,19 +311,50 @@ input[type="checkbox"].visually-hidden {
 }
 
 .about-item {
+  position: relative;
+
   width: 400px;
   padding: 0;
-  padding-top: 164px;
+  padding-top: 160px;
   margin: 0;
 
   box-sizing: border-box;
+}
+
+.about-item::before {
+  content: "";
+
+  position: absolute;
+  top: 55px;
+  left: 162px;
+
+  width: 76px;
+  height: 76px;
+
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+.about-item-house::before {
+  background-image: url("../img/house-icon.svg");
+  background-size: 75px 72px;
+}
+
+.about-item-food::before {
+  background-image: url("../img/hamburger-icon.svg");
+  background-size: 74px 70px;
+}
+
+.about-item-souvenir::before {
+  background-image: url("../img/present-icon.svg");
+  background-size: 64px 76px;
 }
 
 .feature-title,
 .about-title {
   width: 160px;
   margin: 0 auto;
-  margin-bottom: 21px;
+  margin-bottom: 24px;
 
   font-size: 21px;
   line-height: 21px;
@@ -324,17 +374,13 @@ input[type="checkbox"].visually-hidden {
 
 .feature-text {
   padding: 0px 49px;
-  padding-bottom: 64px;
+  padding-bottom: 60px;
   margin: 0;
-}
-
-.about-title {
-  margin-bottom: 25px;
 }
 
 .about-text {
   padding: 0px 49px;
-  padding-bottom: 86px;
+  padding-bottom: 82px;
   margin: 0;
 }
 
@@ -349,7 +395,7 @@ input[type="checkbox"].visually-hidden {
   width: 450px;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
   font-size: 30px;
   line-height: 36px;
@@ -361,7 +407,7 @@ input[type="checkbox"].visually-hidden {
   width: 600px;
   padding: 0;
   margin: 0 auto;
-  margin-bottom: 46px;
+  margin-bottom: 47px;
 
   line-height: 24px;
 }
@@ -404,7 +450,7 @@ input[type="checkbox"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 25px;
+  padding-bottom: 23px;
 }
 
 .number-items .search-item {
@@ -437,7 +483,7 @@ input[type="checkbox"].visually-hidden {
 .input-number {
   width: 307px;
   height: 38px;
-  padding: 6px 12px;
+  padding: 6px 10px;
 
   font: inherit;
   text-transform: uppercase;
@@ -531,7 +577,7 @@ input[type="checkbox"].visually-hidden {
   justify-content: center;
   width: 39px;
   height: 38px;
-  padding: 6px 7px;
+  padding: 4px;
 
   background-color: #f2f2f2;
   border: 2px solid transparent;
@@ -566,18 +612,20 @@ input[type="checkbox"].visually-hidden {
 }
 
 .button-number {
+  position:relative;
+
   width: 38px;
   height: 38px;
   padding: 6px;
 
   font-size: 14px;
+
   color: #cacaca;
   vertical-align: baseline;
 
   background-color: #f2f2f2;
 
   box-sizing: border-box;
-
 }
 
 .button-number:hover,
@@ -611,7 +659,7 @@ input[type="checkbox"].visually-hidden {
 .filter-form {
   display: flex;
   flex-wrap: wrap;
-  padding: 30px 72px;
+  padding: 27px 72px 32px;
 
   color: #ffffff;
 
@@ -622,8 +670,9 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter-column {
-  width: 240px;
+  width: 255px;
   padding: 0;
+  padding-right: 20px;
   margin: 0;
 
   border: 0;
@@ -632,7 +681,11 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter-column-cost {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  padding-right: 0;
+  padding-left: 12px;
   margin-left: auto;
 
 }
@@ -647,7 +700,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter-column-cost .filter-legend {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .filter-list {
@@ -658,23 +711,100 @@ input[type="checkbox"].visually-hidden {
 }
 
 .filter-item {
-  margin-bottom: 22px;
+  padding-left: 40px;
+  margin-bottom: 24px;
 }
 
 .filter-item:last-child {
   margin-bottom: 0;
 }
 
-.filter-cost {
-  width: 320px;
+.filter-label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-label::before {
+  content: "";
+
+  position: absolute;
+  top: -2px;
+  left: -40px;
+
+  width: 23px;
+  height: 23px;
 
   border: 2px solid #ffffff;
+  border-radius: 3px;
 
   box-sizing: border-box;
 }
 
+.filter-checkbox:checked + .filter-label::before {
+  width: 27px;
+
+  border: 0;
+  border-radius: 0;
+
+  background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.filter-checkbox:disabled + .filter-label::before {
+  border-color: #6a6a6a;
+  cursor: default;
+}
+
+.filter-checkbox:disabled + .filter-label {
+  color: #6a6a6a;
+  cursor: default;
+}
+
+.filter-checkbox:checked:disabled + .filter-label::before {
+  background-image: url("../img/checkbox-on-disabled.svg");
+}
+
+.filter-cost {
+  position:relative;
+
+  width: 318px;
+  padding: 6px;
+  padding-bottom: 4px;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+
+  box-sizing: border-box;
+}
+
+.filter-cost::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background-color: #ffffff;
+}
+
+.filter-cost label {
+  display: inline-block;
+  padding-left: 58px;
+
+  vertical-align: middle;
+
+  cursor: pointer;
+}
+
 .filter-input {
-  width: 72px;
+  width: 65px;
 
   color: #ffffff;
 
@@ -684,11 +814,80 @@ input[type="checkbox"].visually-hidden {
   box-sizing: border-box;
 }
 
+.filter-cost-range {
+  position: relative;
+
+  height: 20px;
+  padding-top: 11px;
+  padding-bottom: 23px;
+}
+
+.filter-cost-range::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 1px;
+  z-index: 2;
+
+  width: 80%;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.filter-cost-range::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 1px;
+  z-index: 1;
+
+  width: 316px;
+  height: 2px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.filter-cost-button {
+  position: absolute;
+  top: 11px;
+  left: 0;
+  z-index: 3;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+  margin: 0;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.filter-cost-button-max {
+   left: 80%;
+}
+
+
+.filter-cost-button:hover,
+.filter-cost-button:focus,
+.filter-cost-button:active {
+  transform: scale(1.1);
+}
+
 .button-filter {
+  padding: 6px 35px;
+  margin-left: 84px;
+
   font-weight: 400;
 
   background-color: transparent;
   border: 2px solid #ffffff;
+  border-radius: 2px;
 }
 
 .button-filter:hover,
@@ -778,6 +977,16 @@ input[type="checkbox"].visually-hidden {
   margin-left: auto;
 }
 
+.direction {
+  margin: 0;
+  padding: 0;
+  margin-right: 8px;
+}
+
+.direction:last-child {
+  margin-right: 0;
+}
+
 .direction-icon {
   fill: #cacaca;
 }
@@ -797,7 +1006,6 @@ input[type="checkbox"].visually-hidden {
   fill: #81b3d2;
 }
 
-
 /* Список отелей */
 
 .hotels-list {
@@ -810,7 +1018,7 @@ input[type="checkbox"].visually-hidden {
 
 .hotels-item {
   padding: 0;
-  padding-top: 30px;
+  padding-top: 25px;
   margin: 0;
 
   border-bottom: 1px solid #e5e5e5;
@@ -832,11 +1040,16 @@ input[type="checkbox"].visually-hidden {
   margin-left: auto;
 }
 
-.hotel-title {
+.hotel-title-link {
   display: block;
   padding: 0;
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 7px;
+}
+
+.hotel-title {
+  padding: 0;
+  margin: 0;
 
   font-size: 21px;
   line-height: 26px;
@@ -859,6 +1072,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .hotel-image {
+  margin-top: 5px;
   margin-right: 30px;
 }
 
@@ -866,7 +1080,7 @@ input[type="checkbox"].visually-hidden {
   display: flex;
   padding: 0;
   margin: 0;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .hotel-type {
@@ -875,8 +1089,14 @@ input[type="checkbox"].visually-hidden {
 }
 
 .hotel-stars {
+  display: block;
+  padding-top: 5px;
+
+  font-size: 17px;
+  line-height: 17px;
   color: #81b3d2;
-  letter-spacing: 6px;
+  text-align: right;
+  letter-spacing: 5px;
 }
 
 .hotel-rating {
@@ -895,7 +1115,7 @@ input[type="checkbox"].visually-hidden {
 .page-footer {
   display: flex;
   align-items: center;
-  padding-top: 36px;
+  padding-top: 32px;
   padding-bottom: 32px;
 
   color: #000000;
@@ -915,7 +1135,7 @@ input[type="checkbox"].visually-hidden {
 .footer-links {
   width: 400px;
   padding: 0;
-  padding-left: 132px;
+  padding-left: 124px;
   margin: 0;
 
   font-size: 21px;
@@ -927,10 +1147,16 @@ input[type="checkbox"].visually-hidden {
 }
 
 .footer-links a {
+  display: block;
   padding: 0;
   margin: 0;
+  margin-bottom: 6px;
 
   color: #000000;
+}
+
+.footer-links a:last-child {
+  margin-bottom: 0;
 }
 
 .footer-links a:hover,
@@ -988,7 +1214,7 @@ input[type="checkbox"].visually-hidden {
 
 .footer-copyright span {
   display: block;
-  margin-right: 6px;
+  margin-right: 8px;
 }
 
 .copyright-link {

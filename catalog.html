@@ -42,22 +42,16 @@
               <legend class="filter-legend">Инфраструктура:</legend>
               <ul class="filter-list">
                 <li class="filter-item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="pool" checked>
-                    Бассейн
-                  </label>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="pool" id="filter-pool" checked disabled>
+                  <label class="filter-label" for="filter-pool">Бассейн</label>
                 </li>
                 <li class="filter-item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="parking">
-                    Парковка
-                  </label>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="parking" id="filter-parking" disabled>
+                  <label class="filter-label" for="filter-parking">Парковка</label>
                 </li>
                 <li class="filter-item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="wi-fi">
-                    Wi-Fi
-                  </label>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="wi-fi" id="filter-wifi">
+                  <label class="filter-label" for="filter-wifi"> Wi-Fi</label>
                 </li>
               </ul>
 
@@ -66,22 +60,16 @@
               <legend class="filter-legend">Тип жилья:</legend>
               <ul class="filter-list">
                 <li class="filter-item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="hotel" checked>
-                    Гостиница
-                  </label>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
+                  <label class="filter-label" for="filter-hotel">Гостиница</label>
                 </li>
                 <li class="filter-item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="motel" checked>
-                    Мотель
-                  </label>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
+                  <label class="filter-label" for="filter-motel">Мотель</label>
                 </li>
                 <li class="filter-item">
-                  <label>
-                    <input class="visually-hidden" type="checkbox" name="apartments" checked>
-                    Апартаменты
-                  </label>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="apartments" id="filter-apartments" checked>
+                  <label class="filter-label" for="filter-apartments">Апартаменты</label>
                 </li>
               </ul>
 
@@ -96,8 +84,8 @@
               </div>
 
               <div class="filter-cost-range">
-                <button type="button" aria-label="Переместите ползунок, чтобы задать минимальную стоимость"></button>
-                <button type="button" aria-label="Переместите ползунок, чтобы задать максимальную стоимость"></button>
+                <button class="filter-cost-button filter-cost-button-min" type="button" aria-label="Переместите ползунок, чтобы задать минимальную стоимость"></button>
+                <button class="filter-cost-button filter-cost-button-max" type="button" aria-label="Переместите ползунок, чтобы задать максимальную стоимость"></button>
               </div>
 
                 <button class="button button-small button-filter" type="submit">Показать</button>
@@ -138,14 +126,14 @@
               <article class="hotel">
                 <img class="hotel-image" src="img/hotel-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
                 <div class="hotel-left-column">
-                  <a class="hotel-title" href="#">
-                    <h3>Amara Resort & Spa</h3>
+                  <a class="hotel-title-link" href="#">
+                    <h3 class="hotel-title">Amara Resort & Spa</h3>
                   </a>
                   <p class="hotel-about">
                     <span class="hotel-type">Гостиница</span>
                     <span class="hotel-cost">От 4000 Р.</span>
                   </p>
-                  <a class="button button-small button-blue" href="#">Подробнее</a>
+                  <a class="button button-small button-blue disabled" href="#">Подробнее</a>
                   <a class="button button-small button-brown" href="#">Забронировать</a>
                 </div>
                 <div class="hotel-right-column">
@@ -159,8 +147,8 @@
               <article class="hotel">
                 <img class="hotel-image" src="img/hotel-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
                 <div class="hotel-left-column">
-                  <a class="hotel-title" href="#">
-                    <h3>Desert Quail Inn</h3>
+                  <a class="hotel-title-link" href="#">
+                    <h3 class="hotel-title">Desert Quail Inn</h3>
                   </a>
                   <p class="hotel-about">
                     <span class="hotel-type">Мотель</span>
@@ -180,8 +168,8 @@
               <article class="hotel">
                 <img class="hotel-image" src="img/hotel-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
                 <div class="hotel-left-column">
-                  <a class="hotel-title" href="#">
-                    <h3>Villas at Poco Diablo</h3>
+                  <a class="hotel-title-link" href="#">
+                    <h3 class="hotel-title">Villas at Poco Diablo</h3>
                   </a>
                   <p class="hotel-about">
                     <span class="hotel-type">Апартаменты</span>
