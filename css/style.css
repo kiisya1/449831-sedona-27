@@ -71,14 +71,9 @@ input[type="checkbox"].visually-hidden {
 
 .button-small {
   padding: 3px 16px;
-  margin-right: 4px;
 
   font-size: 14px;
   line-height: 21px;
-}
-
-.button-small:last-child {
-  margin-right: 0;
 }
 
 .button-brown {
@@ -110,6 +105,28 @@ input[type="checkbox"].visually-hidden {
 
   background-color: #5496bd;
 }
+
+.button-transparent {
+  padding: 6px 35px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.button-transparent:hover,
+.button-transparent:focus,
+.button-transparent:active {
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+/* Стили для кнопок и ссылок в состоянии disabled */
 
 .button:disabled,
 a.disabled,
@@ -503,7 +520,7 @@ a.disabled:active
 
   font-size: 14px;
   text-align: center;
-  vertical-align: baseline;
+  vertical-align: top;
 
   -moz-appearance: textfield;
 }
@@ -511,6 +528,7 @@ a.disabled:active
 .input-number::-webkit-outer-spin-button,
 .input-number::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    appearance: none;
 }
 
 /* .input-date::placeholder и .input-number::placeholder  после автопрефиксера */
@@ -621,20 +639,62 @@ a.disabled:active
   font-size: 14px;
 
   color: #cacaca;
-  vertical-align: baseline;
+  vertical-align: top;
 
   background-color: #f2f2f2;
 
   box-sizing: border-box;
 }
 
-.button-number:hover,
-.button-number:focus {
-  color: #000000;
+.button-number-minus::after,
+.button-number-plus::after,
+.button-number-plus::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  background-color: #a9a9a9;
 }
 
-.button-number:active {
-  color: #81b3d2;
+.button-number-minus::after {
+  margin-left: -6px;
+  margin-top: -1px;
+
+  width: 12px;
+  height: 3px;
+}
+
+.button-number-plus::after {
+  margin-left: -5px;
+  margin-top: -1px;
+
+  width: 11px;
+  height: 3px;
+}
+
+.button-number-plus::before {
+  margin-top: -5px;
+  margin-left: -1px;
+
+  width: 3px;
+  height: 11px;
+}
+
+.button-number-minus:hover::after,
+.button-number-minus:focus::after,
+.button-number-plus:hover::after,
+.button-number-plus:focus::after,
+.button-number-plus:hover::before,
+.button-number-plus:focus::before {
+  background-color: #000000;
+}
+
+
+.button-number-minus:active::after,
+.button-number-plus:active::after,
+.button-number-plus:active::before {
+  background-color: #81b3d2;
 }
 
 .button-search {
@@ -760,6 +820,8 @@ a.disabled:active
   cursor: default;
 }
 
+/* Стили для чекбоксов в состоянии disabled */
+
 .filter-checkbox:disabled + .filter-label {
   color: #6a6a6a;
   cursor: default;
@@ -768,6 +830,8 @@ a.disabled:active
 .filter-checkbox:checked:disabled + .filter-label::before {
   background-image: url("../img/checkbox-on-disabled.svg");
 }
+
+/* Слайдер ценового диапазона */
 
 .filter-cost {
   position:relative;
@@ -812,6 +876,14 @@ a.disabled:active
   border: 0;
 
   box-sizing: border-box;
+
+  -moz-appearance: textfield;
+}
+
+.filter-input::-webkit-outer-spin-button,
+.filter-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .filter-cost-range {
@@ -880,22 +952,7 @@ a.disabled:active
 }
 
 .button-filter {
-  padding: 6px 35px;
-  margin-left: 84px;
-
-  font-weight: 400;
-
-  background-color: transparent;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-}
-
-.button-filter:hover,
-.button-filter:focus,
-.button-filter:active {
-  color: #000000;
-
-  background-color: #ffffff;
+  margin: 0 auto;
 }
 
 .results {
@@ -1086,6 +1143,10 @@ a.disabled:active
 .hotel-type {
   min-width: 110px;
   padding-right: 7px;
+}
+
+.button-blue-hotels {
+  margin-right: 4px;
 }
 
 .hotel-stars {
