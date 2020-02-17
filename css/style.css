@@ -107,7 +107,7 @@ input[type="checkbox"].visually-hidden {
 }
 
 .button-transparent {
-  padding: 6px 35px;
+  padding: 6px 33px;
 
   font-size: 14px;
   line-height: 21px;
@@ -953,6 +953,7 @@ a.disabled:active
 
 .button-filter {
   margin: 0 auto;
+  transform: translateX(-6px);
 }
 
 .results {
