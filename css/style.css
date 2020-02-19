@@ -808,7 +808,8 @@ a.disabled:active
 }
 
 .filter-checkbox:focus + .filter-label::before {
-  box-shadow: 0 0 2px 3px rgba(40, 88, 174, 0.75);
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
 }
 
 /* Стили для чекбоксов в состоянии disabled */
