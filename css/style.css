@@ -406,10 +406,11 @@ a.disabled:active
 
 /* Анимация формы при ошибке */
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   10%,
@@ -417,14 +418,65 @@ a.disabled:active
   50%,
   70%,
   90% {
-    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(5px);
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+}
+
+/* Анимация формы при появлении */
+
+@-webkit-keyframes appear {
+  0% {
+    max-height: 0;
+    padding: 0 55px;
+  }
+  100% {
+    max-height: 100vh;
+    padding: 55px;
+  }
+}
+
+@keyframes appear {
+  0% {
+    max-height: 0;
+    padding: 0 55px;
+  }
+  100% {
+    max-height: 100vh;
+    padding: 55px;
   }
 }
 
@@ -432,6 +484,7 @@ a.disabled:active
 
 .hotels-search {
   position: relative;
+
   padding-top: 50px;
 }
 
@@ -469,9 +522,9 @@ a.disabled:active
   z-index: 100;
 
   display: block;
-  margin-left: -284px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 568px;
-  height: 395px;
   padding: 55px;
 
   background-color: #ffffff;
@@ -480,16 +533,17 @@ a.disabled:active
   box-sizing: border-box;
   overflow: hidden;
 
-  transition: all 0.3s ease-in-out;
+  -webkit-animation: appear 0.6s;
+          animation: appear 0.6s;
 }
 
 .search-form-close {
-  height: 0;
-  padding: 0 55px;
+  display: none;
 }
 
 .search-form-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .search-item {
@@ -1235,7 +1289,7 @@ a.disabled:active
   position: absolute;
   bottom: 0;
   left: 0;
-  z-index: 100;
+  z-index: 10;
 
   width: 100%;
 
