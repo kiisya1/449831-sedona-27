@@ -404,6 +404,30 @@ a.disabled:active
   margin: 0;
 }
 
+/* Анимация формы при ошибке */
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}
+
 /* Форма поиска отелей на главной */
 
 .hotels-search {
@@ -432,7 +456,7 @@ a.disabled:active
   line-height: 24px;
 }
 
-.button-form-close {
+.button-form-open {
   width: 568px;
   padding: 30px;
 
@@ -443,14 +467,29 @@ a.disabled:active
   position: absolute;
   left: 50%;
   z-index: 100;
+
+  display: block;
   margin-left: -284px;
   width: 568px;
+  height: 395px;
   padding: 55px;
 
   background-color: #ffffff;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
 
   box-sizing: border-box;
+  overflow: hidden;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.search-form-close {
+  height: 0;
+  padding: 0 55px;
+}
+
+.search-form-error {
+  animation: shake 0.6s;
 }
 
 .search-item {
@@ -950,9 +989,13 @@ a.disabled:active
           transform: scale(1.1);
 }
 
+.filter-cost-button:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .button-filter {
-  -ms-grid-row-align: center;             /* Такую штуку выдал автопрефиксер, оставить или убрать? И без нее в IE работает как нужно */
-          align-self: center;             /* Делает кнопку необходимой ширины в IE 11 */
+  align-self: center;             /* Делает кнопку необходимой ширины в IE 11 */
   margin: 0 auto;
 
   -webkit-transform: translateX(-6px);
