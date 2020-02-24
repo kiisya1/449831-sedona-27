@@ -1,3 +1,5 @@
+/* Форма */
+
 var button = document.querySelector(".button-form-open");
 var form = document.querySelector(".search-form");
 var departureDate = form.querySelector("[name=departure-date]");
@@ -10,6 +12,8 @@ var isStorageSupport = true;
 var storage = "";
 var storageChl = "";
 
+/* Проверка доступности localStorage  */
+
 try {
   storage = localStorage.getItem("adults");
   storageChl = localStorage.getItem("children");
@@ -17,7 +21,11 @@ try {
   isStorageSupport = false;
 }
 
+/* Закрытие формы при инициализации js  */
+
 form.classList.add("search-form-close");
+
+/* Открытие и закрытие формы  */
 
 button.addEventListener("click", function(evt) {
   evt.preventDefault();
@@ -30,15 +38,17 @@ button.addEventListener("click", function(evt) {
     if (storageChl) {
       children.value = storageChl;
     }
-    if (form.classList.contains("search-form-error")) {
-      form.classList.remove("search-form-error");
-    }
     departureDate.focus();
   } else {
     form.classList.remove("search-form-open");
     form.classList.add("search-form-close");
+    if (form.classList.contains("search-form-error")) {
+      form.classList.remove("search-form-error");
+    }
   }
 });
+
+/* Проверка формы перед отправкой  */
 
 sabmitButton.addEventListener("click", function(evt) {
   if (!departureDate.value || !arrivalDate.value || !adults.value || !children.value) {
@@ -54,3 +64,32 @@ sabmitButton.addEventListener("click", function(evt) {
     }
   }
 });
+
+/* Карта */
+
+/* Функция ymaps.ready() будет вызвана, когда загрузятся все компоненты API, а также когда будет готово DOM-дерево. */
+ymaps.ready(init);
+function init(){
+  // Создание карты.
+  var myMap = new ymaps.Map("map", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    center: [34.869497, -111.760186],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 9,
+    // Тип покрытия карты: "Гибрид".
+    type: "yandex#hybrid"
+  });
+  // Создание геообъекта с типом точка (метка).
+  var myGeoObject = new ymaps.GeoObject({
+    geometry: {
+      type: "Point", // тип геометрии - точка
+      coordinates: [34.869497, -111.760186] // координаты точки
+    }
+  }, {
+    preset: "islands#redDotIcon"
+  })
+  // Размещение геообъекта на карте.
+  myMap.geoObjects.add(myGeoObject);
+}
