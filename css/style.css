@@ -130,13 +130,11 @@ input[type="checkbox"].visually-hidden {
 
 /* Стили для корректного отображения кнопок в состоянии active в IE */
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  button.button:active span,
-  button.button:active svg {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
+button.button:active span,
+button.button:active svg {
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 /* Стили для кнопок и ссылок в состоянии disabled */
