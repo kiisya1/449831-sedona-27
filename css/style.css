@@ -128,6 +128,17 @@ input[type="checkbox"].visually-hidden {
   background-color: #ffffff;
 }
 
+/* Стили для корректного отображения кнопок в состоянии active в IE */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  button.button:active span,
+  button.button:active svg {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
+
 /* Стили для кнопок и ссылок в состоянии disabled */
 
 .button:disabled,
@@ -1090,8 +1101,8 @@ a.disabled:active
   align-self: center;             /* Делает кнопку необходимой ширины в IE 11 */
   margin: 0 auto;
 
-  -webkit-transform: translateX(-6px);
-          transform: translateX(-6px);
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 
 .results {
